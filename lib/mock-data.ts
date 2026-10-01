@@ -4,7 +4,7 @@ export interface Metric { label: string; value: string; change: string; positive
 export interface Agent { name: Department; score: number; status: string; description: string; finding: string; reason: string; action: string; metrics: Metric[]; }
 export interface Task { id: string; title: string; department: Department; priority: 'High' | 'Medium' | 'Opportunity'; due: string; status: TaskStatus; }
 export interface Notice { id: number; title: string; body: string; department: Department; level: 'Critical' | 'Warnings' | 'Opportunities' | 'Information'; time: string; }
-export interface Campaign { id: number; name: string; offer: string; facebook: string; instagram: string; budget: number; time: string; status: 'Draft' | 'Active'; }
+export interface Campaign { id: number; name: string; offer: string; facebook: string; instagram: string; budget: number; time: string; status: 'Draft' | 'Active' | 'Scheduled'; }
 export const company = { name: 'Lotus Coffee', manager: 'Thang Le', location: 'Ho Chi Minh City', tagline: 'See the whole business. Know your next move.' };
 export const metrics: Metric[] = [
  {label:'Monthly revenue',value:'154.2M',change:'+8.4%',positive:true,note:'vs. last month'},
